@@ -5,7 +5,7 @@ namespace jvdh\AsseticWorker;
 use Assetic\Asset\AssetInterface;
 use Assetic\Factory\AssetFactory;
 use Assetic\Factory\Worker\WorkerInterface;
-use jvdh\AsseticWorker\Exception\UnsupportedHashingAlgorithm;
+use jvdh\AsseticWorker\Exception\UnsupportedHashingAlgorithmException;
 
 class CacheBustingWorker implements WorkerInterface
 {
@@ -65,12 +65,10 @@ class CacheBustingWorker implements WorkerInterface
     }
 
     /**
-     * Get the sha1 hash of an asset or asset collection
-     *
      * @param AssetInterface $asset
      * @return string
      */
-    protected function getHash(AssetInterface $asset)
+    private function getHash(AssetInterface $asset)
     {
         return substr(hash($this->algorithm, $asset->dump()), 0, $this->hashLength);
     }
@@ -81,7 +79,7 @@ class CacheBustingWorker implements WorkerInterface
     private function ensureHashAlgorithmIsValidOrThrowException($algorithm)
     {
         if (!in_array($algorithm, hash_algos(), true)) {
-            throw new UnsupportedHashingAlgorithm($algorithm);
+            throw new UnsupportedHashingAlgorithmException($algorithm);
         }
     }
 }

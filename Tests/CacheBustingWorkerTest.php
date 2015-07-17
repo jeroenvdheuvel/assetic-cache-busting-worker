@@ -124,7 +124,7 @@ class CacheBustingWorkerTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \jvdh\AsseticWorker\Exception\UnsupportedHashingAlgorithm
+     * @expectedException \jvdh\AsseticWorker\Exception\UnsupportedHashingAlgorithmException
      */
     public function testProcess_withUnsupportedHashAlgorithm_shouldThrowException()
     {

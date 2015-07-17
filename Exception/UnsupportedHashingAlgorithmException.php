@@ -4,7 +4,7 @@ namespace jvdh\AsseticWorker\Exception;
 
 use RuntimeException;
 
-class UnsupportedHashingAlgorithm extends RuntimeException
+class UnsupportedHashingAlgorithmException extends RuntimeException
 {
     /**
      * @param string $algorithm
