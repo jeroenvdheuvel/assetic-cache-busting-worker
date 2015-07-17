@@ -1,8 +1,16 @@
 {
     "name": "jeroenvdheuve/assetic-cache-busting-worker",
-    "description": "Assetic cache busting worker based on file content",
+    "description": "Assetic cache busting worker. Adds a hash a filename based on file content.",
     "type": "library",
     "license": "MIT",
+    "keywords": [
+        "assetic",
+        "cache",
+        "busting",
+        "hash",
+        "content",
+        "modification time"
+    ],
     "authors": [
         {
             "name": "jeroenvdheuvel",
@@ -11,6 +19,7 @@
     ],
     "minimum-stability": "stable",
     "require": {
+        "ext-hash": "*",
         "kriswallsmith/assetic": "~1.2"
     },
     "require-dev": {
