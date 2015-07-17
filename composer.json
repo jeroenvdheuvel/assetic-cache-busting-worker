@@ -1,0 +1,24 @@
+{
+    "name": "jeroenvdheuve/assetic-cache-busting-worker",
+    "description": "Assetic cache busting worker based on file content",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jeroenvdheuvel",
+            "email": "jeroen.van.den.heuvel@werkspot.nl"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "kriswallsmith/assetic": "~1.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4"
+    },
+    "autoload": {
+        "psr-4": {
+            "jvdh\\AsseticWorker\\": ""
+        }
+    }
+}
