@@ -1,6 +1,6 @@
 {
     "name": "jeroenvdheuve/assetic-cache-busting-worker",
-    "description": "Assetic cache busting worker. Adds a hash a filename based on file content.",
+    "description": "Assetic cache busting worker. Adds a hash to the filename based on file content.",
     "type": "library",
     "license": "MIT",
     "keywords": [
@@ -13,7 +13,7 @@
     ],
     "authors": [
         {
-            "name": "jeroenvdheuvel",
+            "name": "Jeroen van den Heuvel",
             "email": "jeroen.van.den.heuvel@werkspot.nl"
         }
     ],
